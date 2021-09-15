@@ -49,6 +49,10 @@ h3 {
     align-items: center;
     height: 400px;
 } 
+.login-btn {
+    background: #fff;
+    color: #000;
+}
 
 /* Modal */
 
@@ -62,7 +66,6 @@ h3 {
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
 }
-
 
 .modal-box {
     background-color: #fff;
