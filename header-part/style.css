@@ -1,147 +1,311 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 html,
 body {
-    font-family: 'Lato', sans-serif;
-    background-color: #000;
+    font-family: 'Rubik', sans-serif;
+    background: #000;
     color: #fff;
     overflow-x: hidden;
     line-height: 1.7;
 }
-
 img {
     width: 100%;
 }
 a {
     text-decoration: none;
 }
-ul {
-    list-style: none;
-}
+
 h3 {
     font-size: 26px;
     font-weight: bold;
 }
 h4 {
-    color: #00ed82;
-    font-size: 13px;
+    color: #1CE783;
     text-transform: uppercase;
+    font-weight: bold;
 }
 .btn {
     display: inline-block;
-    background: #fff;
-    color: #000;
-    min-width: 123px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 14px;
     cursor: pointer;
     padding: 20px 32px;
+    font-size: 15px;
     font-weight: bold;
+    text-transform: uppercase;
+    line-height: 14px;
+    letter-spacing: 1px;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    min-width: 135px;
+    color: #333;
 }
-.btn-outline {
-    background: none;
-    color: #fff;
-    border: 2px solid #fff;
-  }
-  
-  .btn-outline:hover {
-    color: #fff;
-    border-color: #ccc;
-  }
-.sub-link {
-    font-size: 12px;
-    display: block;
-    color: #ccc;
-    margin-top: 5px;
+
+.link-text {
     text-decoration: underline;
+    color: #ccc;
+    font-size: 14px;
+    display: block;
+    
 }
 
 /* Header css */
 
-
 .header {
-    height: 530px;
+    height: 665px;
     background: url('../img/header.jpg') no-repeat center center / cover;
 }
-.header nav {
+
+.header .navigation {
+    position: relative;
     display: flex;
-    justify-content: flex-end;
+    justify-content: end;
     padding: 20px 40px;
     z-index: 2;
-    position: relative;
 }
-.header nav .login-btn {
+.navigation .login-btn {
     cursor: pointer;
     background: none;
     border: none;
     color: #fff;
-    font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    font-weight: bold;
 }
-.header .logo {
-    width: 270px;
-    margin: 20px 0;
-}
-.header .header-content {
+
+.header-content {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 30px;
+   margin-top: 30px;
 }
-.header .header-text-1 {
+
+.header-content .logo {
+    width: 270px;
+    margin: 20px 0;
+}
+.header-content .header-text-1  {
     font-size: 22px;
     font-weight: bold;
 }
-.header .header-text-2 {
+.header-content .header-text-2  {
     font-size: 18px;
     margin: 25px 0;
 }
-.header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 180px;
-    z-index: 1;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.76) 15.54%,
-      rgba(0, 0, 0, 0.192) 60.23%,
-      rgba(0, 0, 0, 8e-5) 100%
-    );
-  }
-.header .btn-cta:hover {
+
+.header-content .btn-cta:hover {
     opacity: 0.8;
 }
-.header .legal-text {
+.header-content .legal-text {
     font-size: 11px;
-    margin-top: 20px;
     color: #ccc;
+    margin: 20px 0 60px 0;
+}
+
+/* Sub-Header */
+
+.sub-head {
+    
+    background: linear-gradient(179.81deg,
+    rgba(4,4,4,0.7) .17%,
+    rgba(4,4,4,0.45) 85.02%, 
+   rgba(4,4,4,0.3) 112.52%) !important;
 }
 
 .sub-header {
     display: grid;
     grid-template-columns: 2fr 4fr 2fr;
     gap: 40px;
-    align-items: center;
     padding: 30px 40px;
+    margin: 0 auto;
+    align-items: center;
+    width: 90%; 
+}
+.sub-header img {
+    max-width: 355px;
 }
 .sub-header > div:last-of-type {
-    justify-self: end;
     align-self: end;
+    justify-self: end;
 }
-.sub-header > div:last-of-type .sub-link {
+.sub-header > div:last-of-type .link-text {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 10px;
+    
+}
+.btn-outline {
+    background: none;
+    color: #fff;
+    border: 2px solid #fff;
+}
+.btn-outline:hover {
+    color: #fff;
+    border-color: #ccc;
+}
+
+
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-box {
+    background-color: #fff;
+    color: #000;
+    width: 400px;
+    margin: 10% auto;
+    position: relative;
+    animation: modalopen 1s;
+}
+@keyframes modalopen {
+    form {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-body {
+    padding: 50px;
+}
+
+.modal .btn {
+    width: 100%;
+    margin-top: 30px;
+}
+.modal .close {
+    cursor: pointer;
+    height: 23px;
+    width: 23px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.modal .modal-footer {
+    background-color: #f7f7f9;
+    padding: 20px 0;
+    border: 1px solid #eee;
+    color: #333;
     text-align: center;
 }
+.modal .modal-footer a {
+    color: steelblue;
+}
+
+.modal .form-control {
+    margin: 20px 0;
+}
+
+.form-control label {
+    display: block;
+    text-transform: uppercase;
+}
+.form-control input {
+    width: 100%;
+    border: 2px solid #ccc;
+    height: 50px;
+    padding: 5px;
+} 
+
+
+
+/* Media query */
+
+@media (max-width: 1428px ) {
+   
+    .btn-outline {
+        font-size: 12px;
+        padding: 20px 20px;
+        letter-spacing: 0.5px;
+    }
+   
+    
+}
+
+@media (max-width: 1104px ) {
+   
+    .btn-outline {
+        font-size: 11px;
+        padding: 15px 15px;
+        letter-spacing: 0.5px;
+    }
+   
+    
+}
+
+
+@media (max-width: 768px ) {
+    .header .logo {
+        width: 200px;
+    }
+    .header .header-content  {
+        text-align: center;
+        padding: 0 20px;
+    }
+    .sub-header h4 {
+        font-size: 10px;
+    }
+    .sub-header h3 {
+        font-size: 15px;
+        
+    }
+    .btn-outline {
+        font-size: 7px;
+        padding: 10px 10px;
+        letter-spacing: 0.5px;
+    }
+   
+    
+}
+
+@media (max-width: 411px ) {
+
+    .header {
+        height: 750px;
+    }
+    
+
+    .header .logo {
+        width: 150px;
+    }
+    .header .header-content  {
+        text-align: center;
+        padding: 0 20px;
+    }
+    .header .header-text-1 {
+        font-size: 16px;
+    }
+    .header .header-text-2 {
+        font-size: 11px;
+    }
+
+
+    .sub-header {
+        display: block;
+        text-align: center;
+        
+    }
+    .sub-header .sub-text-1 {
+        padding: 20px 0;
+    }
+    
+   
+    
+}
+

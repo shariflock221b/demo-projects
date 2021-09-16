@@ -4,46 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header</title>
+    <title>Hulu header</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-        <section>
-            <div class="header">
-                <nav>
-                    <ul>
-                        <li>
-                            <button class="  login-btn"> Log In</button>
-                        </li>
-                    </ul>
-                </nav>
-
-                <div class="header-content">
-                    <h4>Try Up to one month free</h4>
-                    <img src="img/logo.png" alt="hulu" class="logo">
-                    <div class="header-text-1">Watch thousands of TV shows and movies.</div>
-                    <div class="header-text-2">HBO Max™, SHOWTIME®, CINEMAX® and STARZ® available as add-ons.</div>
-                    <button class="btn btn-cta">Start Your Free Trial</button>
-                    <div class="legal-text">
-                        Free trial for new & eligible returning subscribers only.
-                    </div>
-                </div>
+    <div class="header">
+       <div class="main-header">
+            <div class="navigation">
+                <button class="login-btn">Log In</button>
             </div>
-        </section>
-        <section class="sub-header">
-            <img src="img/logos.png" alt="logos">
-            <div>
-                <h4>Bundle with any Hulu plan & save</h4>
+            <div class="header-content">
+                <h4>Try up to one month free</h4>
+                <img src="img/logo.png" alt="logo" class="logo">
+                <div class="header-text-1">Watch thousands of TV shows and movies.</div>
+                <div class="header-text-2">HBO Max™, SHOWTIME®, CINEMAX® and STARZ® available as add-ons.</div>
+                <button class="btn btn-cta">start your free trial</button>
+                <div class="legal-text">Free trial for new & eligible returning subscribers only.</div>
+            </div>
+       </div>
+       <div class="sub-head">
+        <div class="sub-header">
+           <div class="sub-img"><img src="img/logos.png" alt="logos"></div> 
+            <div class="sub-text-1">
+                <h4>BUNDLE WITH ANY HULU PLAN & SAVE</h4>
                 <h3>Get Hulu, Disney+, and ESPN+.</h3>
-                <a href="#" class="sub-link">Details</a>
+                <a href="#" class="link-text">Details</a>
             </div>
-            <div>
-                <a href="#" class="btn btn-outline">Get Bundle</a>
-                <a href="#" class="sub-link">Terms apply</a>
+            <div class="sub-btn-1">
+                <button class="btn btn-outline">Get the disney bundle</button>
+                 <a href="#" class="link-text">Terms apply</a> 
             </div>
-        </section>
+         </div>
+       </div>
+       
 
+    </div>
+
+    <div class="modal">
+        <div class="modal-box">
+            <div class="modal-body">
+                <h3>Log In</h3>
+                <form action="">
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="form-control">
+                        <label for="password">Password</label>
+                        <input type="password" id="password">
+                    </div>
+                    <a href="#"> Forgot your email or password?</a>
+                    <button class="btn btn-dark">Log In</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <p>Don't have an account?<a href="#">Start your free trial</a></p>
+            </div>
+            <img class="close" src="img/close.svg" alt="close">
+        </div>
+        
+    </div>
+
+
+    <script src="main.js"></script>
     
 </body>
 </html>
+  
